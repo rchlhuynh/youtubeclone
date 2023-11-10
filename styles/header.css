@@ -68,7 +68,7 @@ to shrink we use flex-shrink */
 .user-picture {
   height: 34px;
   border-radius: 17px;
-  
+  cursor: pointer
 
 }
 .youtube-logo {
