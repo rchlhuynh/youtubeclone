@@ -1,0 +1,180 @@
+  .header {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.231);
+  z-index: 100
+
+
+}
+.left-section {
+  margin-right: 70px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.voice-search, .upload, .youtube-apps, .youtube-logo, .notifications {
+  height: 20px;
+  cursor: pointer
+}
+/* to prevent the icons in the right section
+to shrink we use flex-shrink */
+/* so basically flex-shrink: 0 = don't shrink */
+.right-section {
+  width: 180px;
+  margin-left: 37px;
+  max-width: 500px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.upload {
+  height: 25px;
+}
+.youtube-apps {
+  height: 25px;
+}
+.notifications {
+  height: 25px;
+}
+.notifications-container {
+  position: relative
+}
+.notifications-count {
+  position: absolute;
+  font-size: 11px;
+  border-radius: 10px;
+  top: 0;
+  right: -3px;
+  background-color: red;
+  color: white;
+  padding: 1px 4.5px;
+  border: 0.6px solid rgba(0,0,0,0)
+}
+.user-picture {
+  height: 34px;
+  border-radius: 17px;
+  
+
+}
+.youtube-logo {
+  height: 20px;
+}
+.middle-section {
+  flex: 1;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+.search-button {
+  height: 41px;
+  width: 60px;
+  border: 1px solid rgb(187,187,187);
+  margin-left: -2px;
+  background-color: rgb(240,240,240);
+  border-radius: 2px;
+  cursor: pointer;
+
+}
+.search-button, .voice-search-button,
+.upload-icon-container, .notifications-container, .youtube-apps-container
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-container .tooltip,
+.notifications-container .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 10px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -40px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+
+}
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-container:hover .tooltip,
+.notifications-container:hover .tooltip
+{
+  opacity: 1;
+}
+
+
+/* a trick hre is I can set 
+the border-radius
+to half the width of the height
+ to make it round */
+.voice-search-button {
+  border-radius: 20px;
+  border: none;
+  height: 40px;
+  width: 40px;
+  margin-left: 7px;
+  background-color: rgb(240,240,240);
+
+
+}
+.voice-search-icon {
+  height: 20px;
+  
+   
+
+}
+/* search bar has a default width
+but ASA it reaches that default width
+its not shrinking anymore
+so to remove the default width
+we set width: 0 */
+/* width: 0 = shrink */
+.search-bar {
+  flex: 1;
+  padding: 10px 10px ;
+  height: 19px;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 2px rgba(0,0,0,0.05);
+  width: 0;
+
+}
+.search-bar::placeholder {
+  font-size: 15px;
+  font-family: Roboto, Arial ;
+}
+.search-icon {
+  height: 23px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.user-profile {
+  width: 50px;
+  border-radius: 50px;
+}
+
+
+ 

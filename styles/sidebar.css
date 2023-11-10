@@ -1,0 +1,38 @@
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  width: 72px;
+  z-index: 200;
+  padding-top: 5px;
+
+
+}
+.sidebar-link {
+  height: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer
+}
+
+/*position fixed = placed in the browser window
+/*position absolute = placed on the page which does move
+when we scroll*/
+
+.sidebar-link:hover {
+  background-color: rgb(235, 235, 235);
+
+}
+.sidebar-link img {
+  height: 24px;
+  margin-bottom: 5px;
+  
+}
+.sidebar-link div {
+  font-size: 12px;
+  white-space: nowrap;
+}
